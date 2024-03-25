@@ -1,0 +1,17 @@
+# Vite-specific files
+.vite/
+
+# Node modules
+node_modules/
+
+# Build output
+dist/
+
+# Cache and logs
+.cache/
+.DS_Store
+Thumbs.db
+
+# Optional: IDE-specific files
+.idea/
+.vscode/
