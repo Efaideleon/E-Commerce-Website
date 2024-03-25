@@ -1,1 +1,8 @@
-
+.App {
+    display: flex;
+    justify-content: center;
+    justify-content: center; /* This centers content horizontally */
+    align-items: center;
+    min-height: 100vh;
+    /* Ensure content is centered vertically even if it doesn't fill the screen */
+}

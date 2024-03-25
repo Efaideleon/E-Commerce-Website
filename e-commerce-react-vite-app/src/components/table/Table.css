@@ -1,0 +1,29 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px auto;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    font-weight: bold;
+}
+
+th:hover {
+    cursor: pointer;
+}
+
+table.expanded {
+    box-shadow: 0 0 5px #888;
+}
+
+table:not(.expanded) td {
+    /* Hide empty cells when not expanded */
+    display: none;
+}
