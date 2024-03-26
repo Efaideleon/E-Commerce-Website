@@ -1,6 +1,15 @@
 {
   "dependencies": {
+    "papaparse": "^5.4.1",
     "react-table": "^7.8.0",
     "uuidv4": "^6.2.13"
+  },
+  "devDependencies": {
+    "@rollup/plugin-dsv": "^3.0.4",
+    "@types/node": "^20.11.30",
+    "@types/papaparse": "^5.3.14",
+    "csv-loader": "^3.0.5",
+    "vite-plugin-checker": "^0.6.4",
+    "vite-plugin-csv": "^1.0.0"
   }
 }

@@ -1,10 +1,11 @@
 import './App.css'
-import TableRenderer from './components/table/TableRenderer'
+import InventoryTableRenderer from './components/inventory_table/InventoryTableRenderer'
+
 function App() {
 
   return (
     <div className="App">
-      <TableRenderer />
+      <InventoryTableRenderer />
     </div>
   )
 }
