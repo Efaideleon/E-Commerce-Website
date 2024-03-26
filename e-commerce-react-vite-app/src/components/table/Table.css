@@ -27,3 +27,26 @@ table:not(.expanded) td {
     /* Hide empty cells when not expanded */
     display: none;
 }
+
+.table-fixed {
+    --num-columns: 4; 
+    table-layout: fixed;
+    width: 100%;
+}
+
+.table-fixed colgroup col:first-child {
+    width: 40%;
+    /* Adjust the width as needed */
+}
+
+.table-fixed colgroup col:not(:first-child) {
+    width: calc(60% / (var(--num-columns) - 1));
+    /* Adjust the number of columns accordingly */
+}
+
+.table-fixed th,
+.table-fixed td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

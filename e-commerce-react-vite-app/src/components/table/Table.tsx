@@ -11,7 +11,7 @@ const Table = <T extends object>({ data, columns }: TableProps<T>) => {
   };
 
   return (
-    <table className={isExpanded ? 'expanded' : ''}>
+    <table className={`table-fixed ${isExpanded ? 'expanded' : ''}`}>
       <thead>
         <tr>
           {columns.map((column) => (
