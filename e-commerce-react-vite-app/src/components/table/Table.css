@@ -34,7 +34,7 @@ table:not(.expanded) td {
     width: 100%;
 }
 
-.table-fixed colgroup col:first-child {
+.table-fixed th:first-child, td:first-child{
     width: 40%;
     /* Adjust the width as needed */
 }
