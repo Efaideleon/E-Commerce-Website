@@ -14,3 +14,15 @@ export const InventoryColumns: Column<InventoryData>[] = [
     { header: "Precio Enviado", accessor: "precio_enviado" },
     { header: "Ganancia para Envio", accessor: "ganancia_para_envio" },
 ];
+
+
+export type InventoryTableTitleBarProps = {
+    date: string;
+    total_spent: number;
+    total_for_sending: number;
+}
+
+export type InventoryTableRendererProps = {
+    date: string
+    data_source_link: string
+}

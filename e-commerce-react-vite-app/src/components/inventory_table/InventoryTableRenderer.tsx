@@ -1,21 +1,28 @@
 import Table from "../table/Table";
 import { fetchCSVData } from "../data/FetchCSVData";
-import { InventoryData, InventoryColumns } from "./types";
+import { InventoryData, InventoryColumns, InventoryTableRendererProps } from "./types";
 import { useEffect, useState } from "react";
+import InventoryTableTitleBar from "./InventoryTableTittleBar";
+import { inventoryColumnSums } from "../data/DataProcessor";
 
-export default function InventoryTableRenderer() {
+export default function InventoryTableRenderer({ date, data_source_link }: InventoryTableRendererProps) {
     const [inventoryData, setInventoryData] = useState<InventoryData[]>([]);
 
     useEffect(() => {
-      fetchCSVData<InventoryData>('../../../inventory_test_data.csv')
-        .then(data => setInventoryData(data));
-    }, []);
-    
-    console.log(inventoryData);
-    
+        fetchCSVData<InventoryData>(data_source_link)
+            .then(data => setInventoryData(data));
+    }, [data_source_link]);
+
+    const { totalSpent, totalProfitForSending } = inventoryColumnSums(inventoryData);
+
     return (
-        <>
-            <Table data={inventoryData} columns={InventoryColumns} />
-        </>
+        <div>
+            <div>
+                <InventoryTableTitleBar date={date} total_spent={totalSpent} total_for_sending={totalProfitForSending} />
+            </div>
+            <div>
+                <Table data={inventoryData} columns={InventoryColumns} />
+            </div>
+        </div>
     )
 }
