@@ -1,4 +1,4 @@
-import { InventoryData } from "../inventory_table/types"
+import { InventoryData } from "./inventory_data_types";
 
 export function inventoryColumnSums(data: InventoryData[]) {
 	let totalSpent = 0;
