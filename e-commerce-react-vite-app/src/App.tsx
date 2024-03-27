@@ -4,7 +4,7 @@ import InventoryTableRenderer from './components/inventory_table/InventoryTableR
 function App() {
 	return (
 		<div className="App">
-			<InventoryTableRenderer date='1-1-2023' data_source_link='../inventory_test_data.csv' />
+			<InventoryTableRenderer date='1-1-20' data_source_link='../inventory_test_data.csv'/>
 		</div>
 	)
 }
