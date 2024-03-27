@@ -1,8 +1,18 @@
 .App {
     display: flex;
+    flex-direction: column;
+    /* Make elements stack vertically */
     justify-content: center;
-    justify-content: center; /* This centers content horizontally */
+    justify-content: center;
+    /* This centers content horizontally */
     align-items: center;
     min-height: 100vh;
     /* Ensure content is centered vertically even if it doesn't fill the screen */
+}
+
+.dashboard-container {
+    width: 100%;
+    /* Make the dashboard take full width */
+    margin-bottom: 20px;
+    /* Add some spacing between dashboard and table */
 }

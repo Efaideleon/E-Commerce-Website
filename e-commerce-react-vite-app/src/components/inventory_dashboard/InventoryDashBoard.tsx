@@ -1,8 +1,11 @@
 import { InventoryDashBoardProps } from "./types"
+import "./InventoryDashboard.css"
 
-export const InventoryDashBoard = ({total_spent}: InventoryDashBoardProps) => {
+export const InventoryDashBoard = ({ total_spent }: InventoryDashBoardProps) => {
     return (
-        <div>InventoryDashBoard Total Spent: {total_spent}</div>
+        <div className="InventoryDashBoard">
+            Total Spent: {total_spent}
+        </div>
     )
 }
 

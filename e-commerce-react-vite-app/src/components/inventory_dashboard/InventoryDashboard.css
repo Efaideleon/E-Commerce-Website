@@ -1,0 +1,16 @@
+.InventoryDashBoard {
+    background-color: #f0f0f0;
+    /* Light gray background */
+    padding: 15px;
+    /* Add some padding */
+    border-radius: 5px;
+    /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+    text-align: center;
+    /* Center the text */
+    font-size: 1.2rem;
+    /* Make the text slightly larger */
+    font-weight: bold;
+    /* Make the text bold */
+}

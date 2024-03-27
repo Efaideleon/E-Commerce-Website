@@ -19,8 +19,15 @@ function App() {
 
 	return (
 		<div className="App">
-			<InventoryDashBoard total_spent={10000}/>
-			<InventoryTableRenderer date='1-1-2020' totalSpent={totalSpent} totalProfitForSending={totalProfitForSending} inventoryData={inventoryData} />
+			<div className="dashboard-container">
+				<InventoryDashBoard total_spent={10000} />
+			</div>
+			<InventoryTableRenderer
+				date='1-1-2020'
+				totalSpent={totalSpent}
+				totalProfitForSending={totalProfitForSending}
+				inventoryData={inventoryData}
+			/>
 		</div>
 	)
 }
