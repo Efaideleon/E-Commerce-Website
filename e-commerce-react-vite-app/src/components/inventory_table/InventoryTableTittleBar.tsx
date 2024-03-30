@@ -1,5 +1,8 @@
 import { InventoryTableTitleBarProps } from "./types";
 
+/**
+ * The title bar that summarizes the Table's columns
+ */
 const InventoryTableTitleBar = ({ date, total_spent, total_for_sending }: InventoryTableTitleBarProps) => {
     return (
         <table>

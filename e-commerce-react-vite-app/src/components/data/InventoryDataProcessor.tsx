@@ -1,17 +1,63 @@
 import { InventoryData } from "./inventory_data_types";
 
-export function inventoryColumnSums(data: InventoryData[]) {
-	let totalSpent = 0;
-	let totalProfitForSending = 0;
+/**
+ * 
+ * @param data Array of `InventoryData` Objects
+ * @returns The sum of the `precio con tax` from each product
+ */
+export function getPrecioConTaxSum(data: InventoryData[]) {
+	let total = 0;
 
 	data.forEach((row) => {
-		totalSpent += row.precio_con_tax; // Sum for 2nd column
-		totalProfitForSending += row.ganancia_para_envio; // Sum for 4th column
+		total += row.precio_con_tax; 
 	});
-
-
-	totalSpent = parseFloat(totalSpent.toFixed(2));
-	totalProfitForSending = parseFloat(totalProfitForSending.toFixed(2));
-
-	return { totalSpent, totalProfitForSending };
+	total = parseFloat(total.toFixed(2));
+	return total;
 }
+
+/**
+ * 
+ * @param data Array of `InventoryData` Object 
+ * @returns The sum of the `precio enviado` from each product
+ */
+export function getPrecioEnviadoSum(data: InventoryData[]) {
+	let total = 0;
+	
+	data.forEach((row) => {
+		total += row.precio_enviado; 
+	});
+	total = parseFloat(total.toFixed(2));
+	return total;
+}
+
+/**
+ * 
+ * @param inventories An array containing all the inventory arrays
+ * @returns	 The sum of the total spent from all inventories. Price bought at store
+ */
+export function getTotalSpentFromAllInventories(inventories: InventoryData[][]) {
+	let total = 0;
+
+	inventories.forEach((inventory) => {
+		total += getPrecioConTaxSum(inventory);
+	})
+	total = parseFloat(total.toFixed(2));
+	return total;
+}
+
+/**
+ * 
+ * @param inventories  An array containing all the inventory arrays
+ * @returns  The sum of the `Precio Enviado` across all inventories
+ */
+export function getTotalEnviadoFrommAllInventories(inventories: InventoryData[][]) {
+	let total = 0;
+
+	inventories.forEach((inventory) => {
+		total += getPrecioEnviadoSum(inventory);
+	})
+	total = parseFloat(total.toFixed(2));
+	return total;
+
+}
+
