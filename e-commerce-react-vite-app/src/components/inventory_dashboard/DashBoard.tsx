@@ -1,10 +1,10 @@
 import { InventoryDashBoardProps } from "./types"
-import "./InventoryDashboard.css"
+import "./Dashboard.css"
 
 /**
  * The Website's Dashboard
  */
-export const InventoryDashBoard = ({ total_spent, total_enviado }: InventoryDashBoardProps) => {
+export const Dashboard = ({ total_spent, total_enviado }: InventoryDashBoardProps) => {
     return (
         <div className="InventoryDashBoard">
             Total Spent: {total_spent}

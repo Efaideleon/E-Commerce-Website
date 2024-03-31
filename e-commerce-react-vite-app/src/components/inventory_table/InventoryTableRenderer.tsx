@@ -1,6 +1,6 @@
 import Table from "../table/Table";
 import { InventoryColumns, InventoryTableRendererProps } from "./types";
-import InventoryTableTitleBar from "./InventoryTableTittleBar";
+import InventoryBalanceSummary from "./InventoryBalanceSummary";
 
 /**
  * Displays both the Table Title Bar which summarize the Table columns, and
@@ -11,7 +11,7 @@ export default function InventoryTableRenderer({ date, totalSpent, totalProfitFo
     return (
         <div>
             <div>
-                <InventoryTableTitleBar date={date} total_spent={totalSpent} total_for_sending={totalProfitForSending} />
+                <InventoryBalanceSummary date={date} total_spent={totalSpent} total_for_sending={totalProfitForSending} />
             </div>
             <div>
                 <Table data={inventoryData} columns={InventoryColumns} />

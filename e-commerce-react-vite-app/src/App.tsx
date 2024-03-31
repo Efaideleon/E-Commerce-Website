@@ -4,8 +4,7 @@ import { fetchCSVData } from './components/helper_functions/FetchCSVData';
 import { InventoryData } from './components/data/inventory_data_types';
 import { useEffect, useState } from 'react';
 import { getPrecioConTaxSum, getPrecioEnviadoSum, getTotalEnviadoFrommAllInventories, getTotalSpentFromAllInventories } from './components/data/InventoryDataProcessor';
-import { InventoryDashBoard } from './components/inventory_dashboard/InventoryDashBoard';
-
+import { Dashboard } from './components/inventory_dashboard/DashBoard';
 
 function App() {
 	const [allInventoriesData, setAllInventoriesData] = useState<InventoryData[][]>([]);
@@ -37,7 +36,7 @@ function App() {
 		<div className="App">
 			{/* Website Dashboard */}
 			<div className="dashboard-container">
-				<InventoryDashBoard
+				<Dashboard
 					total_spent={totalSpent}
 					total_enviado={totalEnviado}
 				/>
